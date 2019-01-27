@@ -4,6 +4,7 @@
   "description": "Spend less time setting up projects and more time building them",
   "files": [
     "utils",
+    "config",
     "uniformly.js"
   ],
   "bin": {
