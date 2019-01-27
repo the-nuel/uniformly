@@ -32,7 +32,7 @@ yargs
                     default: 'src/'
                 }),
         ({ source, config, out, modules }) => {
-            execute('babel', [source, '-d', out, '--config-file', config, '--verbose'], {
+            execute('babel', [source, '-d', out, '--config-file', config], {
                 modules
             });
         }
