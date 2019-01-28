@@ -11,7 +11,7 @@ module.exports = function() {
             babel: {
                 config: resolveConfigFile('babel.config.js')
             },
-            node_modules: require('find-up').sync('node_modules')
+            node_modules: require('find-up').sync('node_modules', { cwd: __dirname })
         });
     }
 
