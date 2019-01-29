@@ -1,10 +1,17 @@
 'use strict';
 const config = require('../../utils/configure')();
-const { presets, plugins } = require(config.babel.config);
+const { transform } = require('@babel/core');
 
-module.exports = require('babel-jest').createTransformer({
-    presets,
-    plugins,
-    babelrc: false,
-    configFile: false,
-});
+module.exports = {
+    process(src, filename) {
+        const result = transform(src, {
+            filename,
+            presets: [
+                ...require(config.babel.config).presets,
+                require('babel-preset-jest')
+            ],
+        });
+
+        return result ? result.code : src;
+    },
+};
