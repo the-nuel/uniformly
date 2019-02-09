@@ -2,9 +2,9 @@ module.exports = {
     comments: false,
     sourceMaps: true,
     presets: [
-        '@babel/preset-flow',
+        require.resolve('@babel/preset-flow'),
         [
-            '@babel/env',
+            require.resolve('@babel/preset-env'),
             {
                 targets: {
                     node: '8.10'

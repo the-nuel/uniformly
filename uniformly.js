@@ -33,6 +33,9 @@ yargs
             ]);
         }
     )
+    .command('test', 'tests the project', () => {
+        execute('jest', ['--config', config.jest.config]);
+    })
     .alias('v', 'version')
     .describe('version', 'show version')
     .strict()

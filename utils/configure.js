@@ -11,6 +11,10 @@ module.exports = function() {
             babel: {
                 config: resolveConfigFile('babel.config.js')
             },
+            jest: {
+                roots: ['src/'],
+                config: resolveConfigFile('jest.config.js'),
+            },
             node_modules: require('find-up').sync('node_modules', { cwd: __dirname })
         });
     }
