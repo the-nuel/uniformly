@@ -23,7 +23,7 @@ yargs
                     describe: "the source directory to transpile",
                     default: "src/",
                 }),
-        ({ source, out, env }) => {
+        ({ source, out, env, ...others }) => {
             process.env.NODE_ENV = env || "development";
             process.env.BABEL_ENV = env || "development";
 
@@ -33,6 +33,7 @@ yargs
                 out,
                 "--config-file",
                 config.babel.config,
+                ...others._.slice(1),
             ]);
         }
     )
@@ -40,10 +41,14 @@ yargs
         "test",
         "tests the project",
         yargs => yargs,
-        ({ env }) => {
+        ({ env, ...others }) => {
             process.env.NODE_ENV = env || "test";
             process.env.BABEL_ENV = env || "test";
-            execute("jest", ["--config", config.jest.config]);
+            execute("jest", [
+                "--config",
+                config.jest.config,
+                ...others._.slice(1),
+            ]);
         }
     )
     .option("env", {
