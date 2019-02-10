@@ -51,6 +51,27 @@ yargs
             ]);
         }
     )
+    .command(
+        "tidyup",
+        "tidies source code",
+        yargs =>
+            yargs
+                .option("source", {
+                    alias: ["src", "in", "i"],
+                    type: "string",
+                    describe: "the source directory to tidy",
+                    default: "src/**/*",
+                }),
+        ({ source, ...others }) => {
+            execute("prettier", [
+                "--config",
+                config.prettier.config,
+                "--write",
+                ...others._.slice(1),
+                source,
+            ]);
+        }
+    )
     .option("env", {
         alias: ["environment", "node_env"],
         type: "string",

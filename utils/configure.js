@@ -36,6 +36,9 @@ module.exports = function() {
                 roots: ["src/"],
                 config: resolveConfigFile("jest.config.js"),
             },
+            prettier: {
+                config: resolveConfigFile("prettier.config.js"),
+            },
             node_modules: findup.sync("node_modules", {
                 cwd: __dirname,
             }),
