@@ -5,6 +5,6 @@ const spawn = require('cross-spawn').sync;
 
 module.exports = function(binary, args) {
     spawn(path.join(config.node_modules, '.bin', binary), args, {
-        stdio: 'inherit'
+        stdio: 'inherit',
     });
 };

@@ -1,16 +1,16 @@
-"use strict";
-const fs = require("fs");
-const findup = require("find-up");
+'use strict';
+const fs = require('fs');
+const findup = require('find-up');
 let config = null;
 
 function resolveConfigFile(filename, folder) {
     return require.resolve(
-        `../config/${folder ? `${folder}/` : ""}${filename}`
+        `../config/${folder ? `${folder}/` : ''}${filename}`
     );
 }
 
 function findClosestPackage() {
-    const file = fs.readFileSync(findup.sync("package.json"), "utf-8");
+    const file = fs.readFileSync(findup.sync('package.json'), 'utf-8');
     return JSON.parse(file);
 }
 
@@ -20,26 +20,26 @@ function isReactProject() {
     return Object.keys({
         ...pkg.dependencies,
         ...pkg.peerDependencies,
-    }).includes("react");
+    }).includes('react');
 }
 
 module.exports = function() {
     if (!config) {
-        config = require("rc")("uniformly", {
+        config = require('rc')('uniformly', {
             babel: {
                 config: resolveConfigFile(
-                    isReactProject() ? "react.config.js" : "default.config.js",
-                    "babel"
+                    isReactProject() ? 'react.config.js' : 'default.config.js',
+                    'babel'
                 ),
             },
             jest: {
-                roots: ["src/"],
-                config: resolveConfigFile("jest.config.js"),
+                roots: ['src/'],
+                config: resolveConfigFile('jest.config.js'),
             },
             prettier: {
-                config: resolveConfigFile("prettier.config.js"),
+                config: resolveConfigFile('prettier.config.js'),
             },
-            node_modules: findup.sync("node_modules", {
+            node_modules: findup.sync('node_modules', {
                 cwd: __dirname,
             }),
         });

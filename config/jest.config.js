@@ -7,11 +7,11 @@ module.exports = {
         '**/*.{js,jsx}',
         '!**/*.config.js',
         '!**/node_modules/**',
-        '!**/vendor/**'
+        '!**/vendor/**',
     ],
     transform: {
-        '^.+\\.js$': require.resolve('./jest/transform')
+        '^.+\\.js$': require.resolve('./jest/transform'),
     },
     roots: config.jest.roots,
-    rootDir: process.cwd()
+    rootDir: process.cwd(),
 };
