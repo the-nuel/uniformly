@@ -39,6 +39,12 @@ module.exports = function() {
             prettier: {
                 config: resolveConfigFile('prettier.config.js'),
             },
+            eslint: {
+                config: resolveConfigFile(
+                    isReactProject() ? 'react.config.js' : 'default.config.js',
+                    'eslint'
+                ),
+            },
             node_modules: findup.sync('node_modules', {
                 cwd: __dirname,
             }),

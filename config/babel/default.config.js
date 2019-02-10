@@ -7,16 +7,16 @@ module.exports = {
             require.resolve('@babel/preset-env'),
             {
                 targets: {
-                    node: '8.10'
+                    node: '8.10',
                 },
-                useBuiltIns: 'usage'
-            }
-        ]
+                useBuiltIns: 'usage',
+            },
+        ],
     ],
     ignore: [
         '/**/*.spec.js',
         '/**/*.test.js',
         '/**/__tests__/*',
         '/**/__mocks__/*',
-    ]
+    ],
 };
