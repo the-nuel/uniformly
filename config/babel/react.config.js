@@ -7,7 +7,7 @@ module.exports = {
             {
                 flow: true,
                 absoluteRuntime: false,
-            }
+            },
         ],
     ],
     ignore: [
@@ -17,5 +17,5 @@ module.exports = {
         '/**/__mocks__/*',
         '/**/__fixtures__/*',
         '/**/*.stories.js',
-    ]
+    ],
 };

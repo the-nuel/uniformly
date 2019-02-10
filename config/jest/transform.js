@@ -8,7 +8,7 @@ module.exports = {
             filename,
             presets: [
                 ...require(config.babel.config).presets,
-                require('babel-preset-jest')
+                require('babel-preset-jest'),
             ],
         });
 
