@@ -1,5 +1,5 @@
-# 🥋 @nuel/uniformly
-Uniformly exists to remove all the setup time required when getting new projects up and running. Inspired by Create React App, it provides an opinionated [Babel](https://babeljs.io/), [Jest](https://jestjs.io/), [Prettier](https://prettier.io/) and [ESLint](https://eslint.org) configuration so you can just get started with writing some code.
+# 🥋 uniformly
+Uniformly exists to remove all the setup time required when getting new projects up and running. Inspired by Create React App, it provides an opinionated [Babel](https://babeljs.io/), [Jest](https://jestjs.io/), [Prettier](https://prettier.io/) and [ESLint](https://eslint.org) configuration so you can just get started with writing code.
 
 ## How do I use it?
 Just update your `package.json` file with some scripts:
