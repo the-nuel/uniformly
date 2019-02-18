@@ -14,21 +14,29 @@ function findClosestPackage() {
     return JSON.parse(file);
 }
 
-function isReactProject() {
+// Returns name of framework if one is used, false if not
+function isFrameworkProject() {
     const pkg = findClosestPackage();
 
-    return Object.keys({
+    const deps = Object.keys({
         ...pkg.dependencies,
         ...pkg.peerDependencies,
-    }).includes('react');
+    });
+
+    if (deps.includes('react')) return 'react';
+    if (deps.includes('vue')) return 'vue';
+
+    return false;
 }
 
 module.exports = function() {
     if (!config) {
+        const framework = isFrameworkProject();
+
         config = require('rc')('uniformly', {
             babel: {
                 config: resolveConfigFile(
-                    isReactProject() ? 'react.config.js' : 'default.config.js',
+                    framework ? framework + '.config.js' : 'default.config.js',
                     'babel'
                 ),
             },
@@ -41,7 +49,7 @@ module.exports = function() {
             },
             eslint: {
                 config: resolveConfigFile(
-                    isReactProject() ? 'react.config.js' : 'default.config.js',
+                    framework ? framework + '.config.js' : 'default.config.js',
                     'eslint'
                 ),
             },
