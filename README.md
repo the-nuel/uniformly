@@ -27,8 +27,14 @@ npx uniformly --help        # lists commands
 npx uniformly build --help  # lists options for the build command
 ```
 
+## But I'm using a library that needs custom Babel configs...
+No need to worry, we currently detect and apply sensible default Babel and ESLint configs for these libraries.
+
+ - ✅ React
+ - ✅ Vue
+
 ## Using custom configs
-Create a `.uniformlyrc` file within your project and you'll be able to override the default configuration for as many of the tools as you'd like.
+If you need more control over what's happening, create a `.uniformlyrc` file within your project and you'll be able to override the default configuration for as many of the tools as you'd like.
 
 ```json
 {

@@ -1,6 +1,6 @@
 {
   "name": "@nuel/uniformly",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Spend less time setting up projects and more time building them",
   "files": [
     "utils",
@@ -15,6 +15,9 @@
     "url": "git+https://github.com/the-nuel/uniformly.git"
   },
   "author": "Tom Davies <tom@thenuel.com>",
+  "contributors": [
+    "Dan Shields <d@shieldsuk.me>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/the-nuel/uniformly/issues"
