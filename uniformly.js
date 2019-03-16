@@ -31,6 +31,8 @@ yargs
                 source,
                 '-d',
                 out,
+                '--extensions',
+                '.js,.jsx,.ts,.tsx',
                 '--config-file',
                 config.babel.config,
                 ...others._.slice(1),
@@ -83,6 +85,8 @@ yargs
             }),
         ({ source, ...others }) => {
             execute('eslint', [
+                '--ext', 
+                '.js,.jsx,.ts,.tsx',
                 '--config',
                 config.eslint.config,
                 ...others._.slice(1),
