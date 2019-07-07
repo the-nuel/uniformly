@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 2.0.0
+### Changed
+ - The default target node version for Babel is now "current".  
+ This is a breaking change if you *need* your build to target "8.10". To retain the 1.x behaviour add `--target "8.10"` to your build command.
+
 ## 1.3.1 (2019-07-07)
 ### Added
  - It's now possible to specify the node version that Babel should target. For example, to target Node 6 just run `uniformly build --target "6"`.

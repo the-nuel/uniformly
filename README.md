@@ -31,14 +31,14 @@ npx uniformly build --help  # lists options for the build command
 Transpiles the project.  
 
 ```bash
-uniformly build [-i src/] [-o lib/] [-t "8.10"]
+uniformly build [-i src/] [-o lib/] [-t "current"]
 ```
 
 | option | aliases | default |description |
 | ------ | ------- | ------- | ----------- |
 | source | src, in, i | src/ | the directory to transpile |
 | output | out, o | lib/ | where to put the transpiled files |
-| target | t | 8.10 | the node version to target |
+| target | t | current | the node version to target |
 
 ## But I'm using a library that needs custom Babel configs...
 No need to worry, we currently detect and apply sensible default Babel and ESLint configs for these libraries.

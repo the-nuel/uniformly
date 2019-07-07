@@ -27,7 +27,7 @@ yargs
                     alias: ['t'],
                     type: 'string',
                     describe: 'the target node version to transpile for',
-                    default: '8.10',
+                    default: 'current',
                 }),
         ({ source, out, env, target, ...others }) => {
             process.env.NODE_ENV = env || 'development';
