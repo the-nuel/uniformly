@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+
 ## 1.3.0 (2019-07-07)
 ### Added
  - It's now possible to specify the node version that Babel should target. For example, to target Node 6 just run `uniformly build --target "6"`.

@@ -8,7 +8,7 @@ module.exports = function(binary, args) {
         path.join('node_modules', '.bin', binary),
         { cwd: __dirname },
     );
-    
+   
     if (!directory) {
         console.log(`Failed to find any binary named "${binary}".`);
         return;
