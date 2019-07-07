@@ -8,7 +8,7 @@ module.exports = {
             require.resolve('@babel/preset-env'),
             {
                 targets: {
-                    node: process.env.BABEL_NODE_TARGET,
+                    node: process.env.BABEL_NODE_TARGET || 'current',
                 },
                 useBuiltIns: 'usage',
                 corejs: 2,
