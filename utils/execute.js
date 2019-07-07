@@ -1,10 +1,13 @@
 'use strict';
-const config = require('./configure')();
+const findup = require('find-up');
 const path = require('path');
 const spawn = require('cross-spawn').sync;
 
 module.exports = function(binary, args) {
-    spawn(path.join(config.node_modules, '.bin', binary), args, {
-        stdio: 'inherit',
-    });
+    const directory = findup.sync(
+        path.join('node_modules', '.bin', binary),
+        { cwd: __dirname },
+    );
+
+    spawn(directory, args, { stdio: 'inherit' });
 };

@@ -53,9 +53,6 @@ module.exports = function() {
                     'eslint'
                 ),
             },
-            node_modules: findup.sync('node_modules', {
-                cwd: __dirname,
-            }),
         });
     }
 
