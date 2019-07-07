@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ## 1.3.0 (2019-07-07)
 ### Added
- - It's now possible to specify the node version that babel should target. For example, to target Node 6 just run `uniformly build --target "6"`.
+ - It's now possible to specify the node version that Babel should target. For example, to target Node 6 just run `uniformly build --target "6"`.
 
 ### Fixed
  - Fixes `uniformly lint` looking for incorrect TypeScript plugin.
