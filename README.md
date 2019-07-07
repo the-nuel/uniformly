@@ -32,6 +32,7 @@ No need to worry, we currently detect and apply sensible default Babel and ESLin
 
  - ✅ React
  - ✅ Vue
+ - ✅ TypeScript
 
 ## Using custom configs
 If you need more control over what's happening, create a `.uniformlyrc` file within your project and you'll be able to override the default configuration for as many of the tools as you'd like.
