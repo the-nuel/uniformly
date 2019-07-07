@@ -10,7 +10,7 @@ module.exports = {
         '!**/vendor/**',
     ],
     transform: {
-        '^.+\\.js$': require.resolve('./jest/transform'),
+        '^.+\\.(js|ts)$': require.resolve('./jest/transform'),
     },
     roots: config.jest.roots,
     rootDir: process.cwd(),

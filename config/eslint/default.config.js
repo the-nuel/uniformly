@@ -5,13 +5,15 @@ module.exports = {
         es6: true,
         node: true,
     },
+    parser: '@typescript-eslint/parser',
     extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
         'plugin:jest/recommended',
         'plugin:flowtype/recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
-    plugins: ['jest', 'flowtype'],
+    plugins: ['jest', 'flowtype', 'typescript'],
     parserOptions: {
         ecmaVersion: 2017,
         sourceType: 'module',
@@ -21,5 +23,6 @@ module.exports = {
     },
     rules: {
         'prettier/prettier': ['error', require(config.prettier.config)],
+        '@typescript-eslint/explicit-member-accessibility': ['off'],
     },
 };

@@ -1,8 +1,9 @@
 module.exports = {
     comments: false,
-    sourceMaps: true,
+    sourceMaps: false,
     presets: [
         require.resolve('@babel/preset-flow'),
+        require.resolve('@babel/preset-typescript'),
         [
             require.resolve('@babel/preset-env'),
             {

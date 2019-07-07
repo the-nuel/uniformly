@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.2.0 (2019-07-07)
+### Added
+ - Added TypeScript build and lint support
+
 ## 1.1.0 (2019-02-24)
 ### Added
  - Added Vue support ([Dan-Shields](https://github.com/Dan-Shields)).
