@@ -10,10 +10,9 @@ module.exports = {
         'eslint:recommended',
         'plugin:prettier/recommended',
         'plugin:jest/recommended',
-        'plugin:flowtype/recommended',
         'plugin:@typescript-eslint/recommended',
     ],
-    plugins: ['jest', 'flowtype', 'typescript'],
+    plugins: ['jest', 'typescript'],
     parserOptions: {
         ecmaVersion: 2017,
         sourceType: 'module',
