@@ -22,10 +22,17 @@ yargs
                     type: 'string',
                     describe: 'the source directory to transpile',
                     default: 'src/',
+                })
+                .option('target', {
+                    alias: ['t'],
+                    type: 'string',
+                    describe: 'the target node version to transpile for',
+                    default: '8.10',
                 }),
-        ({ source, out, env, ...others }) => {
+        ({ source, out, env, target, ...others }) => {
             process.env.NODE_ENV = env || 'development';
             process.env.BABEL_ENV = env || 'development';
+            process.env.BABEL_NODE_TARGET = target;
 
             execute('babel', [
                 source,
