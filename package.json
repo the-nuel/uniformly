@@ -1,6 +1,6 @@
 {
   "name": "@nuel/uniformly",
-  "version": "1.2.0",
+  "version": "1.3.0-beta.0",
   "description": "Spend less time setting up projects and more time building them",
   "files": [
     "utils",
