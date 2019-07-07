@@ -8,9 +8,10 @@ module.exports = {
             require.resolve('@babel/preset-env'),
             {
                 targets: {
-                    node: '8.10',
+                    node: process.env.BABEL_NODE_TARGET,
                 },
                 useBuiltIns: 'usage',
+                corejs: 2,
             },
         ],
     ],
