@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 2.1.0 (2019-07-20)
+### Added
+ - You can now run `uniformly declare-types` to generate TypeScript declaration files for your project. You should create a `tsconfig.json` file in your project directory before using this feature.
+
 ## 2.0.0 (2019-07-07)
 ### Changed
  - The default target node version for Babel is now "current".  

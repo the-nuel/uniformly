@@ -75,7 +75,7 @@ yargs
             execute('tsc', [
                 '-d',
                 '--declarationDir',
-                output,
+                output.replace(/\//g, ''),
                 '--emitDeclarationOnly',
             ]);
         }
