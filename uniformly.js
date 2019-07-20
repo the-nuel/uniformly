@@ -61,6 +61,26 @@ yargs
         }
     )
     .command(
+        'declare-types',
+        'generates TypeScript declaration files',
+        yargs =>
+            yargs
+                .option('output', {
+                    alias: ['out', 'o'],
+                    type: 'string',
+                    describe: 'the path where declaration files should go',
+                    default: 'lib',
+                }),
+        ({ output }) => {
+            execute('tsc', [
+                '-d',
+                '--declarationDir',
+                output,
+                '--emitDeclarationOnly',
+            ]);
+        }
+    )
+    .command(
         'tidyup',
         'tidies source code with Prettier',
         yargs =>
