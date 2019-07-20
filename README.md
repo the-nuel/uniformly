@@ -13,6 +13,7 @@ Just update your `package.json` file with some scripts:
 {
     "scripts": {
         "build": "uniformly build",
+        "postbuild": "uniformly declare-types",
         "test": "uniformly test",
         "tidyup": "uniformly tidyup",
         "lint": "uniformly lint"
@@ -39,6 +40,17 @@ uniformly build [-i src/] [-o lib/] [-t "current"]
 | source | src, in, i | src/ | the directory to transpile |
 | output | out, o | lib/ | where to put the transpiled files |
 | target | t | current | the node version to target |
+
+### declare-types
+Generates TypeScript declaration files.
+
+```bash
+uniformly declare-types [-o lib/]
+```
+
+| option | aliases | default |description |
+| ------ | ------- | ------- | ----------- |
+| output | out, o | lib/ | where to put the declaration files |
 
 ## But I'm using a library that needs custom Babel configs...
 No need to worry, we currently detect and apply sensible default Babel and ESLint configs for these libraries.
