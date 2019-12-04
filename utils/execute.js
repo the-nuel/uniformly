@@ -14,5 +14,6 @@ module.exports = function(binary, args) {
         return;
     }
 
-    spawn(directory, args, { stdio: 'inherit' });
+    const { status } = spawn(directory, args, { stdio: 'inherit' });
+    process.exit(status);
 };
