@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 2.2.1 (2019-12-04)
+### Fixed
+ - Fixes a bug with running tests using Jest, where the core-js version was no longer set in the Babel config. The also defaults the core-js version to 3 if it is not set or set to an invalid value.
+
 ## 2.2.0 (2019-12-04)
 ### Added
  - You can now specify `browserslist` as a target of `uniformly build`, allowing uniformly to be used to build packages for use client-side.

@@ -9,7 +9,7 @@ module.exports = {
                     node: process.env.BABEL_TARGET || 'current',
                 } : { },
                 useBuiltIns: 'usage',
-                corejs: parseInt(process.env.CORE_JS_VERSION),
+                corejs: parseInt(process.env.CORE_JS_VERSION) || 3,
             },
         ],
         require.resolve('@babel/preset-flow'),
