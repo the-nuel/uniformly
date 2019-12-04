@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 2.2.0 (2019-12-04)
+### Added
+ - You can now specify `browserslist` as a target of `uniformly build`, allowing uniformly to be used to build packages for use client-side.
+ - You can now specify the core-js version used by Babel during `uniformly build`, using `--corejs`.
+
 ## 2.1.0 (2019-07-20)
 ### Added
  - You can now run `uniformly declare-types` to generate TypeScript declaration files for your project. You should create a `tsconfig.json` file in your project directory before using this feature.

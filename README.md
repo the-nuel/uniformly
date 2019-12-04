@@ -32,14 +32,15 @@ npx uniformly build --help  # lists options for the build command
 Transpiles the project.  
 
 ```bash
-uniformly build [-i src/] [-o lib/] [-t "current"]
+uniformly build [-i src/] [-o lib/] [-t "current"] [-cjs 3]
 ```
 
 | option | aliases | default |description |
 | ------ | ------- | ------- | ----------- |
 | source | src, in, i | src/ | the directory to transpile |
 | output | out, o | lib/ | where to put the transpiled files |
-| target | t | current | the node version to target |
+| target | t | current | the environment to target |
+| corejs | cjs | 3 | the version of core-js Babel should use |
 
 ### declare-types
 Generates TypeScript declaration files.
