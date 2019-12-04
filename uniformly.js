@@ -26,13 +26,20 @@ yargs
                 .option('target', {
                     alias: ['t'],
                     type: 'string',
-                    describe: 'the target node version to transpile for',
+                    describe: 'the target to transpile for (node version, or "browserslist"',
                     default: 'current',
+                })
+                .option('corejs', {
+                    alias: ['cjs'],
+                    type: 'string',
+                    describe: 'the core-js version that Babel should use',
+                    default: '3',
                 }),
-        ({ source, out, env, target, ...others }) => {
+        ({ source, out, env, target, corejs, ...others }) => {
             process.env.NODE_ENV = env || 'development';
             process.env.BABEL_ENV = env || 'development';
-            process.env.BABEL_NODE_TARGET = target;
+            process.env.BABEL_TARGET = target;
+            process.env.CORE_JS_VERSION = corejs;
 
             execute('babel', [
                 source,
