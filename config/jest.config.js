@@ -4,7 +4,7 @@ const config = require('../utils/configure')();
 module.exports = {
     collectCoverage: true,
     collectCoverageFrom: [
-        '**/*.{js,jsx}',
+        '**/*.{js,ts,jsx,tsx}',
         '!**/*.config.js',
         '!**/node_modules/**',
         '!**/vendor/**',
