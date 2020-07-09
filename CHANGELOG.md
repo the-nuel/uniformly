@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 3.0.4 (2020-07-09)
+### Added
+ - You can now specify a value for `setupFiles` in the default Jest config. This means it is no longer necessary to specify a completely custom config if there are setup tasks before your tests.
+
 ## 3.0.0 (2019-12-24)
 ### Fixed
  - Ensures exit code bubbles up, this should resolve a number of issues when running inside of CI environments.
