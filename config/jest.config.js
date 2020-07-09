@@ -14,4 +14,5 @@ module.exports = {
     },
     roots: config.jest.roots,
     rootDir: process.cwd(),
+    setupFiles: config.jest.setupFiles,
 };

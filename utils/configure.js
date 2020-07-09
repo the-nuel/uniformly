@@ -29,7 +29,7 @@ function resolveLibraryPrefix() {
     return 'default';
 }
 
-module.exports = function() {
+module.exports = function () {
     if (!config) {
         const framework = resolveLibraryPrefix();
 
@@ -43,6 +43,7 @@ module.exports = function() {
             jest: {
                 roots: ['src/'],
                 config: resolveConfigFile('jest.config.js'),
+                setupFiles: [],
             },
             prettier: {
                 config: resolveConfigFile('prettier.config.js'),
