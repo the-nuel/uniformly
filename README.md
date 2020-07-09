@@ -70,7 +70,8 @@ If you need more control over what's happening, create a `.uniformlyrc` file wit
     },
     "jest": {
         "roots": [ "custom/jest/root" ],
-        "config": "/path/to/jest.config.js"
+        "config": "/path/to/jest.config.js",
+        "setupFiles": ["<rootDir>/setupTests.js"]
     },
     "prettier": {
         "config": "/path/to/prettier.config.js"
